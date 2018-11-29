@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chuck_check"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="?attr/actionBarSize"
+    tools:context=".ChuckCheckFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#b3cbb3"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="@string/patrol_label"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/patrolSpinner"
+            style="@style/Widget.AppCompat.DropDownItem.Spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:entries="@array/patrols_array" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TabHost
+            android:id="@+id/tabHost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top|center_horizontal"
+            android:foregroundGravity="top|center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TabWidget
+                    android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TabWidget>
+
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:paddingTop="5dp">
+
+                    <LinearLayout
+                        android:id="@+id/tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <ScrollView
+                            android:id="@+id/scroll1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border1"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/ll1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingStart="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="10dp">
+
+                                <CheckBox
+                                    android:id="@+id/drawer1_cb001"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/pasta_pot" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer1_cb002"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/frying_pan" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer1_cb003"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/griddle" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer1_cb004"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/small_sauce_pan" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer1_cb005"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/medium_pot" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer1_cb006"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/pot_pan_handles1" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer1_cb007"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/pot_pan_handles2" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer1_cb008"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/pot_pan_handles3" />
+
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <ScrollView
+                            android:id="@+id/scroll2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border2"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/ll2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingStart="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="10dp">
+
+                                <CheckBox
+                                    android:id="@+id/drawer2_cb101"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/serving_food_prep_bowls1" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer2_cb102"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/serving_food_prep_bowls2" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer2_cb103"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/serving_food_prep_bowls3" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer2_cb104"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/bowl_lids1" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer2_cb105"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/bowl_lids2" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer2_cb106"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/bowl_lids3" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer2_cb107"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/serving_food_prep_plates1" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer2_cb108"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/serving_food_prep_plates2" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer2_cb109"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/serving_food_prep_plates3" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer2_cb110"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/cutting_board" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer2_cb111"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/collendar" />
+
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tab3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <ScrollView
+                            android:id="@+id/scroll3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border3"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/ll3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingStart="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="10dp">
+
+                                <CheckBox
+                                    android:id="@+id/drawer3_cb201"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/utility_knives1" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer3_cb202"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/utility_knives2" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer3_cb203"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/utility_knives3" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer3_cb204"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/spatula1" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer3_cb205"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/spatula2" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer3_cb206"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/cooking_serving_spoons1" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer3_cb207"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/cooking_serving_spoons2" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer3_cb208"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/slotted_spoon" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer3_cb209"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/wisk" />
+
+                                <View
+                                    android:id="@+id/divider"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="?android:attr/listDivider" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer3_cb210"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/vegetable_peeler" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer3_cb211"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/can_opener" />
+
+                                <View
+                                    android:id="@+id/divider2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="?android:attr/listDivider" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer3_cb212"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/measuring_cup_set" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer3_cb213"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/measuring_spoon_set" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer3_cb214"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/liquid_measuring_cup" />
+
+                                <View
+                                    android:id="@+id/divider3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="?android:attr/listDivider" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer3_cb215"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/lid_lifter" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer3_cb216"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/serving_tongs" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer3_cb217"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/oven_mitts" />
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/tab4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <ScrollView
+                            android:id="@+id/scroll4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border4"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/ll4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingStart="10dp"
+                                android:paddingLeft="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingRight="10dp">
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb301"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/aluminum_foil" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb302"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/plastic_wrap" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb303"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/trash_bags" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb304"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/food_storage_bags_gallon" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb305"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/food_storage_bags_quart" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb306"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/sandwich_bags" />
+
+                                <View
+                                    android:id="@+id/divider4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="?android:attr/listDivider" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb307"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/dish_cloths1" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb308"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/dish_cloths2" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb309"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/dish_cloths3" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb310"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/sponges1" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb311"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/sponges2" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb312"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/scrubbing_pads1" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb313"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/scrubbing_pads2" />
+
+                                <View
+                                    android:id="@+id/divider5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="?android:attr/listDivider" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb314"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/hand_sanitizer" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb315"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/propane1" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb316"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/propane2" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb317"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/lighter" />
+
+                                <View
+                                    android:id="@+id/divider6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="?android:attr/listDivider" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb318"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/cooking_spray" />
+
+                                <CheckBox
+                                    android:id="@+id/drawer4_cb319"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/condiments" />
+
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/drawers_pct_txt"
+            android:layout_width="200dip"
+            android:layout_height="24dp"
+            android:paddingStart="24dp"
+            android:paddingLeft="24dp"
+            android:paddingTop="5dp"
+            android:paddingRight="24dp"
+            android:text="@string/drawers_pct_complete"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="30dp"
+                android:paddingLeft="30dp">
+
+                <TextView
+                    android:id="@+id/pots_pans_pct_txt"
+                    android:layout_width="140dp"
+                    android:layout_height="24dip"
+                    android:paddingStart="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/tab_pots_and_pans"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarDrawer1"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:progressDrawable="@drawable/drawer1progress" />
+
+                <TextView
+                    android:id="@+id/pots_pans_pct"
+                    android:layout_width="50dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/zero_val"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="24dp"
+                    android:paddingStart="2dp"
+                    android:paddingLeft="2dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="2dp"
+                    android:text="@string/per_cent"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="30dp"
+                android:paddingLeft="30dp">
+
+                <TextView
+                    android:id="@+id/bowls_plates_pct_txt"
+                    android:layout_width="140dp"
+                    android:layout_height="24dp"
+                    android:paddingStart="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/tab_bowls_and_plates"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarDrawer2"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:progressDrawable="@drawable/drawer2progress" />
+
+                <TextView
+                    android:id="@+id/bowls_plates_pct"
+                    android:layout_width="50dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/zero_val"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="24dp"
+                    android:paddingStart="2dp"
+                    android:paddingLeft="2dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="2dp"
+                    android:text="@string/per_cent"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="30dp"
+                android:paddingLeft="30dp">
+
+                <TextView
+                    android:id="@+id/utensils_pct_txt"
+                    android:layout_width="140dp"
+                    android:layout_height="24dp"
+                    android:paddingStart="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/tab_utensils"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarDrawer3"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:progressDrawable="@drawable/drawer3progress" />
+
+                <TextView
+                    android:id="@+id/utensils_pct"
+                    android:layout_width="50dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/zero_val"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="24dp"
+                    android:paddingStart="2dp"
+                    android:paddingLeft="2dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="2dp"
+                    android:text="@string/per_cent"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="30dp"
+                android:paddingLeft="30dp">
+
+                <TextView
+                    android:id="@+id/supplies_pct_txt"
+                    android:layout_width="140dp"
+                    android:layout_height="24dp"
+                    android:paddingStart="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="20dp"
+                    android:text="@string/tab_supplies"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarDrawer4"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:progressDrawable="@drawable/drawer4progress" />
+
+                <TextView
+                    android:id="@+id/supplies_pct"
+                    android:layout_width="50dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/zero_val"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="24dp"
+                    android:paddingStart="2dp"
+                    android:paddingLeft="2dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="2dp"
+                    android:text="@string/per_cent"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="30dp"
+                android:paddingLeft="30dp">
+
+                <TextView
+                    android:id="@+id/total_pct_txt"
+                    android:layout_width="140dp"
+                    android:layout_height="24dp"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="30dp"
+                    android:text="@string/total_pct"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarTotal"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:progressDrawable="@drawable/greenprogress" />
+
+                <TextView
+                    android:id="@+id/total_pct"
+                    android:layout_width="50dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="end"
+                    android:gravity="end"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/zero_val"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="24dp"
+                    android:paddingStart="2dp"
+                    android:paddingLeft="2dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="2dp"
+                    android:text="@string/per_cent"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="6dp"
+        android:paddingTop="30dp">
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/clear_this_drawer_btn"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnClearAll"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btnClear"
+            android:text="@string/clear_all_drawers_btn"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnReportQM"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btnClearAll"
+            android:text="@string/report_to_qm_btn"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>

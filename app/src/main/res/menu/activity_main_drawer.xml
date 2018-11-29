@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_calendar"
+            android:title="@string/nav_troop_calendar" />
+
+        <!--
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Troop Activity 2" />
+        -->
+    </group>
+
+    <item android:title="@string/cooking_title">
+        <menu>
+            <item
+                android:id="@+id/nav_chuckbox"
+                android:checkable="true"
+                android:icon="@drawable/ic_menu_chuckbox_gray"
+                android:title="@string/chuck_check_title" />
+            <item
+                android:id="@+id/nav_dutchoven"
+                android:checkable="true"
+                android:icon="@drawable/ic_dutch_oven"
+                android:title="@string/dutch_oven_assistant_title" />
+            <item
+                android:id="@+id/nav_handy_info"
+                android:checkable="true"
+                android:icon="@drawable/ic_chef_hat"
+                android:title="@string/handy_info_for_camp_cooks_title" />
+        </menu>
+    </item>
+
+    <item android:title="@string/nav_configure">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_android_settings"
+                android:title="@string/nav_settings" />
+
+            <!--
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+            -->
+        </menu>
+    </item>
+
+</menu>

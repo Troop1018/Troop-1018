@@ -1,0 +1,231 @@
+<resources>
+    <string name="app_name">Troop 1018</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Troop 1018</string>
+    <string name="nav_header_subtitle">http://troop1018.org</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="patrols_array">
+        <item>Phoenix</item>
+        <item>Surfing Penguins</item>
+        <item>Wacky Wookies</item>
+        <item>Lumberjacks</item>
+    </string-array>
+
+    <string-array name="size_inches_array">
+        <item>5 in</item>
+        <item>6 in</item>
+        <item>8 in</item>
+        <item>10 in</item>
+        <item>10 in D</item>
+        <item>12 in</item>
+        <item>12 in D</item>
+        <item>14 in</item>
+        <item>14 in D</item>
+        <item>16 in</item>
+        <item>18 in</item>
+        <item>20 in</item>
+        <item>22 in</item>
+    </string-array>
+
+    <string-array name="temperature_farenheit_array">
+        <item>250°F</item>
+        <item>275°F</item>
+        <item>300°F</item>
+        <item>325°F</item>
+        <item>350°F</item>
+        <item>375°F</item>
+        <item>400°F</item>
+        <item>425°F</item>
+        <item>450°F</item>
+    </string-array>
+
+    <string-array name="cook_style_array">
+        <item>Simmer</item>
+        <item>Bake</item>
+        <item>Roast</item>
+        <item>Fry</item>
+    </string-array>
+
+    <string name="title_dutch_oven_assistant">Dutch Oven Assistant</string>
+    <string name="size_label">Size</string>
+    <string name="temperature_label">Temperature</string>
+    <string name="method_label">Method</string>
+    <string name="briquettes_on_top">Briquettes On Top:</string>
+    <string name="briquettes_underneath">Briquettes Underneath:</string>
+    <string name="total_briquettes">Total Briquettes:</string>
+    <string name="tab_pots_and_pans"><![CDATA[Pots & Pans]]></string>
+    <string name="tab_bowls_and_plates"><![CDATA[Bowls & Plates]]></string>
+    <string name="tab_utensils">Utensils</string>
+    <string name="tab_supplies">Supplies</string>
+    <string name="pasta_pot">Large pasta pot with lid</string>
+    <string name="frying_pan">Frying pan</string>
+    <string name="griddle">Griddle</string>
+    <string name="small_sauce_pan">Small sauce pan</string>
+    <string name="medium_pot">Medium sized pot</string>
+    <string name="pot_pan_handles1">Pot/pan handles (1 of 3)</string>
+    <string name="pot_pan_handles2">Pot/pan handles (2 of 3)</string>
+    <string name="pot_pan_handles3">Pot/pan handles (3 of 3)</string>
+    <string name="serving_food_prep_bowls1">Serving/food prep bowls (1 of 3)</string>
+    <string name="serving_food_prep_bowls2">Serving/food prep bowls (2 of 3)</string>
+    <string name="serving_food_prep_bowls3">Serving/food prep bowls (3 of 3)</string>
+    <string name="bowl_lids1">Bowl lids (1 of 3)</string>
+    <string name="bowl_lids2">Bowl lids (2 of 3)</string>
+    <string name="bowl_lids3">Bowl lids (3 of 3)</string>
+    <string name="serving_food_prep_plates1">Serving/food prep plates (1 of 3)</string>
+    <string name="serving_food_prep_plates2">Serving/food prep plates (2 of 3)</string>
+    <string name="serving_food_prep_plates3">Serving/food prep plates (3 of 3)</string>
+    <string name="cutting_board">Cutting board</string>
+    <string name="collendar">Collander</string>
+    <string name="utility_knives1">Utility knives (1 of 3)</string>
+    <string name="utility_knives2">Utility knives (2 of 3)</string>
+    <string name="utility_knives3">Utility knives (3 of 3)</string>
+    <string name="spatula1">Spatula (1 of 2)</string>
+    <string name="spatula2">Spatula (2 of 2)</string>
+    <string name="cooking_serving_spoons1">Cooking/serving spoons (1 of 2)</string>
+    <string name="cooking_serving_spoons2">Cooking/serving spoons (2 of 2)</string>
+    <string name="slotted_spoon">Slotted spoon (1)</string>
+    <string name="wisk">Wisk</string>
+    <string name="vegetable_peeler">Vegetable peeler</string>
+    <string name="can_opener">Can opener</string>
+    <string name="measuring_cup_set">Measuring cup set</string>
+    <string name="measuring_spoon_set">Measuring spoon set</string>
+    <string name="liquid_measuring_cup">Liquid measuring cup</string>
+    <string name="lid_lifter">Lid lifter</string>
+    <string name="serving_tongs">Serving tongs</string>
+    <string name="oven_mitts">Oven mitts</string>
+    <string name="aluminum_foil">Aluminum foil (1 roll)</string>
+    <string name="plastic_wrap">Plastic wrap (1 roll)</string>
+    <string name="trash_bags">Trash bags (8)</string>
+    <string name="food_storage_bags_gallon">Food storage bags - Gallon (8)</string>
+    <string name="food_storage_bags_quart">Food storage bags - Quart (8)</string>
+    <string name="sandwich_bags">Sandwich bags (16)</string>
+    <string name="dish_cloths1">Dish cloths (1 of 3)</string>
+    <string name="dish_cloths2">Dish cloths (2 of 3)</string>
+    <string name="dish_cloths3">Dish cloths (3 of 3)</string>
+    <string name="sponges1">Sponges (1 of 2)</string>
+    <string name="sponges2">Sponges (2 of 2)</string>
+    <string name="scrubbing_pads1">Scrubbing pads (1 of 2)</string>
+    <string name="scrubbing_pads2">Scrubbing pads (2 of 2)</string>
+    <string name="hand_sanitizer">Hand sanitizer (1 bottle)</string>
+    <string name="propane1">Propane (1 of 2 bottles)</string>
+    <string name="propane2">Propane (2 of 2 bottles)</string>
+    <string name="lighter">Lighter (1)</string>
+    <string name="cooking_spray">Cooking spray (1 can)</string>
+    <string name="condiments">Condiments (salt, pepper, garlic, cinnamon, sugar)</string>
+    <string name="drawers_pct_complete">Drawers Percent Complete</string>
+    <string name="zero_val">0</string>
+    <string name="per_cent">%</string>
+    <string name="total_pct">Total</string>
+    <string name="all_items_accounted_for">All items accounted for.</string>
+    <string name="patrol_label">Patrol:</string>
+    <string name="rept_sent_to_qm">The report was sent to the quartermaster.</string>
+    <string name="rept_not_sent_to_qm">The report was NOT sent to the quartermaster.</string>
+    <string name="items_missing_lbl">Items Missing:</string>
+    <string name="notes_to_qm_lbl">Notes to Quartermaster:</string>
+    <string name="close_btn">Close</string>
+    <string name="send_report_btn">Send Report</string>
+    <string name="chuck_check_email_subject">Chuck Check Report for the %1$s patrol - %2$s</string>
+    <string name="report_to_qm_btn">Report to QM</string>
+    <string name="clear_all_drawers_btn">Clear all drawers</string>
+    <string name="clear_this_drawer_btn">Clear this drawer</string>
+    <string name="chuckbox_report_troop_1018_quartermaster">Chuckbox Report - Troop 1018 Quartermaster</string>
+    <string name="chuck_check_title">Chuck Check</string>
+    <string name="dutch_oven_assistant_title">Dutch Oven Assistant</string>
+    <string name="cooking_title">Cooking</string>
+    <string name="handy_info_for_camp_cooks_title">Handy Info for Camp Cooks</string>
+    <string name="ok_btn">OK</string>
+    <string name="chuck_check_email_sender_summary">Chuck check email sender</string>
+    <string name="chuck_check_email_sender_title">Email sender</string>
+    <string name="chuck_check_email_sender_password_summary">Chuck check email sender password</string>
+    <string name="chuck_check_email_sender_password_title">Password</string>
+    <string name="chuck_check_email_receiver_summary">Chuck check email receiver</string>
+    <string name="chuck_check_email_receiver_title">Email receiver</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_troop_calendar">Troop Calendar</string>
+    <string name="nav_configure">Configure</string>
+    <string name="nav_settings">Settings</string>
+    <string name="empty_chuck_check">You have not checked any chuckbox items. Make sure you do an inventory of your patrol\'s chuckbox before sending a report to the troop quartermaster</string>
+    <string name="btn_close">Close</string>
+    <string name="authentication_error_msg">Failed to authenticate your credentials.</string>
+    <string name="retrieving_data_msg">Retrieving data...</string>
+    <string name="error_retrieving_data_msg">Error retrieving data!</string>
+    <string name="no_data_found_msg">No data found.</string>
+</resources>

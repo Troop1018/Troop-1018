@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chuckboxReportPopup"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#f5f1e0"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/chckboxPopupTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:ellipsize="none"
+        android:ems="10"
+        android:gravity="center_horizontal"
+        android:maxLines="2"
+        android:scrollHorizontally="false"
+        android:singleLine="false"
+        android:text="@string/chuckbox_report_troop_1018_quartermaster"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/qmLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/chckboxPopupTitle"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/patrolLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            android:paddingTop="4sp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="4sp"
+                android:text="@string/patrol_label"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/patrolName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=""
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/currDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingRight="4sp"
+                android:text=""
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/patrolLayout"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/items_missing_lbl"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/itemsMissing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#b3cbb3"
+                android:scrollbars="vertical"
+                android:text="@string/all_items_accounted_for" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="4dp"
+                android:text="@string/notes_to_qm_lbl"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/qmNotes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:gravity="top|start"
+                android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
+                android:scrollbars="vertical"
+                android:text=""/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="4.0dip"
+                android:paddingTop="5.0dip"
+                android:paddingRight="4.0dip"
+                android:paddingBottom="1.0dip">
+
+                <Button
+                    android:id="@+id/closeCuckboxReport"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="150dp"
+
+                    android:layout_height="60dp"
+                    android:layout_marginRight="6dp"
+                    android:text="@string/close_btn"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/chuckcheckReport"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="150dp"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/sendqmrpt"
+                    android:text="@string/send_report_btn"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

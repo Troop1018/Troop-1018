@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/chuck_check_title">
+        <EditTextPreference
+            android:defaultValue="chuckcheck@troop1018.org"
+            android:key="chuck_check_email_sender"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="@string/chuck_check_email_sender_summary"
+            android:title="@string/chuck_check_email_sender_title" />
+
+        <EditTextPreference
+            android:key="chuck_check_email_sender_password"
+            android:singleLine="true"
+            android:summary="@string/chuck_check_email_sender_password_summary"
+            android:inputType="textPassword"
+            android:title="@string/chuck_check_email_sender_password_title" />
+
+        <EditTextPreference
+            android:defaultValue="quartermaster@troop1018.org"
+            android:key="chuck_check_email_receiver"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="@string/chuck_check_email_receiver_summary"
+            android:title="@string/chuck_check_email_receiver_title" />
+    </PreferenceCategory>
+</PreferenceScreen>
