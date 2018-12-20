@@ -19,11 +19,6 @@
 
 package app.troop1018.org.troop1018.wheel;
 
-import java.util.LinkedList;
-import java.util.List;
-
-import app.troop1018.org.troop1018.R;
-import app.troop1018.org.troop1018.wheel.adapters.WheelViewAdapter;
 import android.content.Context;
 import android.database.DataSetObserver;
 import android.graphics.Canvas;
@@ -36,6 +31,12 @@ import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.view.animation.Interpolator;
 import android.widget.LinearLayout;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import app.troop1018.org.troop1018.R;
+import app.troop1018.org.troop1018.wheel.adapters.WheelViewAdapter;
 
 /**
  * Numeric wheel view.
@@ -101,16 +102,16 @@ public class WheelView extends View {
 	private WheelRecycle recycle = new WheelRecycle(this);
 
 	// Listeners
-	private List<OnWheelChangedListener> changingListeners = new LinkedList<OnWheelChangedListener>();
-	private List<OnWheelScrollListener> scrollingListeners = new LinkedList<OnWheelScrollListener>();
-	private List<OnWheelClickedListener> clickingListeners = new LinkedList<OnWheelClickedListener>();
+	private List<OnWheelChangedListener> changingListeners = new LinkedList<>();
+	private List<OnWheelScrollListener> scrollingListeners = new LinkedList<>();
+	private List<OnWheelClickedListener> clickingListeners = new LinkedList<>();
 
 	/**
 	 * Constructor
 	 */
 	public WheelView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
-		initData(context);
+		initData();
 	}
 
 	/**
@@ -118,7 +119,7 @@ public class WheelView extends View {
 	 */
 	public WheelView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		initData(context);
+		initData();
 	}
 
 	/**
@@ -126,14 +127,13 @@ public class WheelView extends View {
 	 */
 	public WheelView(Context context) {
 		super(context);
-		initData(context);
+		initData();
 	}
 
 	/**
 	 * Initializes class data
-	 * @param context the context
 	 */
-	private void initData(Context context) {
+	private void initData() {
 		scroller = new WheelScroller(getContext(), scrollingListener);
 	}
 

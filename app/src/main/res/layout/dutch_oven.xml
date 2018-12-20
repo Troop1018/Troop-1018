@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:paddingTop="?attr/actionBarSize"
-    tools:context=".DutchOvenFragment">
+    tools:context=".fragments.DutchOvenFragment">
 
     <ScrollView
         android:id="@+id/scroll"
@@ -161,6 +161,7 @@
                 android:id="@+id/dos_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:adjustViewBounds="true"
                 android:paddingTop="10dp"
                 android:src="@drawable/dos" />

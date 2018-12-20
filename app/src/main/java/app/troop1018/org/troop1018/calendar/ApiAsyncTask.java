@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import app.troop1018.org.troop1018.TroopCalendarFragment;
+import app.troop1018.org.troop1018.fragments.TroopCalendarFragment;
 
 public class ApiAsyncTask extends AsyncTask<Void, Void, Void> {
 

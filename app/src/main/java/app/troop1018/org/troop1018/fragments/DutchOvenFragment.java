@@ -1,7 +1,8 @@
-package app.troop1018.org.troop1018;
+package app.troop1018.org.troop1018.fragments;
 
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import app.troop1018.org.troop1018.R;
 import app.troop1018.org.troop1018.wheel.OnWheelChangedListener;
 import app.troop1018.org.troop1018.wheel.OnWheelScrollListener;
 import app.troop1018.org.troop1018.wheel.WheelView;
@@ -60,17 +62,17 @@ public class DutchOvenFragment extends Fragment {
     };
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        final TextView briquettesAbove = getView().findViewById(R.id.num_briquettes_above);
-        final TextView briquettesBelow = getView().findViewById(R.id.num_briquettes_below);
-        final TextView briquettesTotal = getView().findViewById(R.id.num_briquettes_total);
-        final ImageView methodImage = getView().findViewById(R.id.method_image);
+        final TextView briquettesAbove = view.findViewById(R.id.num_briquettes_above);
+        final TextView briquettesBelow = view.findViewById(R.id.num_briquettes_below);
+        final TextView briquettesTotal = view.findViewById(R.id.num_briquettes_total);
+        final ImageView methodImage = view.findViewById(R.id.method_image);
 
         Resources res = getResources();
 
-        sizeWheel = getView().findViewById(R.id.size_wheel);
+        sizeWheel = view.findViewById(R.id.size_wheel);
         ArrayWheelAdapter<String> adapter1 =
                 new ArrayWheelAdapter<>(getContext(), res.getStringArray(R.array.size_inches_array));
         adapter1.setTextSize(18);
@@ -96,7 +98,7 @@ public class DutchOvenFragment extends Fragment {
             }
         });
 
-        temperatureWheel = getView().findViewById(R.id.temperature_wheel);
+        temperatureWheel = view.findViewById(R.id.temperature_wheel);
         ArrayWheelAdapter<String> adapter2 =
                 new ArrayWheelAdapter<>(getContext(), res.getStringArray(R.array.temperature_farenheit_array));
         adapter2.setTextSize(18);
@@ -122,7 +124,7 @@ public class DutchOvenFragment extends Fragment {
             }
         });
 
-        methodWheel = getView().findViewById(R.id.cook_style_wheel);
+        methodWheel = view.findViewById(R.id.cook_style_wheel);
         ArrayWheelAdapter<String> adapter3 =
                 new ArrayWheelAdapter<>(getContext(), res.getStringArray(R.array.cook_style_array));
         adapter3.setTextSize(18);
@@ -155,7 +157,7 @@ public class DutchOvenFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         return inflater.inflate(R.layout.dutch_oven, container, false);
     }

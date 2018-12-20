@@ -1,15 +1,15 @@
-package app.troop1018.org.troop1018;
+package app.troop1018.org.troop1018.fragments;
 
 //import android.accounts.AccountManager;
 //import android.app.Dialog;
+
 import android.content.Context;
-//import android.content.Intent;
-//import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
@@ -18,6 +18,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.desai.vatsal.mydynamiccalendar.MyDynamicCalendar;
+
+import java.util.List;
+
+import app.troop1018.org.troop1018.R;
+
+//import android.content.Intent;
+//import android.content.SharedPreferences;
 //import com.google.android.gms.common.ConnectionResult;
 //import com.google.android.gms.common.GooglePlayServicesUtil;
 //import com.google.api.client.auth.oauth2.Credential;
@@ -34,18 +41,8 @@ import com.desai.vatsal.mydynamiccalendar.MyDynamicCalendar;
 //import com.google.api.client.util.store.FileDataStoreFactory;
 //import com.google.api.services.calendar.CalendarScopes;
 //import com.google.api.services.calendar.Calendar;
-
-import java.io.File;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.List;
-
-import app.troop1018.org.troop1018.calendar.ApiAsyncTask;
 //import app.troop1018.org.troop1018.calendar.CreateCalendarService;
 
-import static android.app.Activity.RESULT_CANCELED;
-import static android.app.Activity.RESULT_OK;
 
 public class TroopCalendarFragment extends Fragment {
 
@@ -58,29 +55,29 @@ public class TroopCalendarFragment extends Fragment {
 //    final HttpTransport transport = AndroidHttp.newCompatibleTransport();
 //    final JsonFactory jsonFactory = GsonFactory.getDefaultInstance();
 
-    public static final int REQUEST_ACCOUNT_PICKER = 1000;
-    public static final int REQUEST_AUTHORIZATION = 1001;
-    public static final int REQUEST_GOOGLE_PLAY_SERVICES = 1002;
-    public static final String PREF_ACCOUNT_NAME = "accountName";
+//    public static final int REQUEST_ACCOUNT_PICKER = 1000;
+//    public static final int REQUEST_AUTHORIZATION = 1001;
+//    public static final int REQUEST_GOOGLE_PLAY_SERVICES = 1002;
+//    public static final String PREF_ACCOUNT_NAME = "accountName";
 //    public static final String[] SCOPES = { CalendarScopes.CALENDAR_READONLY };
 //    private static final List<String> SCOPES = Arrays.asList(CalendarScopes.CALENDAR_READONLY);
-
-    private static final String CREDENTIALS_FILE_PATH = "/client_secret.json";
-    private static final String TOKENS_DIRECTORY_PATH = "tokens";
+//
+//    private static final String CREDENTIALS_FILE_PATH = "/client_secret.json";
+//    private static final String TOKENS_DIRECTORY_PATH = "tokens";
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mStatusText = getView().findViewById(R.id.mStatusText);
+        mStatusText = view.findViewById(R.id.mStatusText);
 //        mStatusText.setText(getString(R.string.retrieving_data_msg));
 
-        mResultsText = getView().findViewById(R.id.mResultsText);
+        mResultsText = view.findViewById(R.id.mResultsText);
         mResultsText.setPadding(16, 16, 16, 16);
         mResultsText.setVerticalScrollBarEnabled(true);
         mResultsText.setMovementMethod(new ScrollingMovementMethod());
 
-        MyDynamicCalendar troopCalendar = getView().findViewById(R.id.troopCalendar);
+        MyDynamicCalendar troopCalendar = view.findViewById(R.id.troopCalendar);
 
         troopCalendar.setCalendarBackgroundColor("#eeeeee");
         troopCalendar.setHeaderBackgroundColor("#c3c388");

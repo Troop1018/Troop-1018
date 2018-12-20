@@ -1,4 +1,4 @@
-package app.troop1018.org.troop1018;
+package app.troop1018.org.troop1018.gmail;
 
 import java.security.AccessController;
 import java.security.Provider;

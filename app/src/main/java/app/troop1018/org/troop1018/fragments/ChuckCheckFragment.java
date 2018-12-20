@@ -1,4 +1,4 @@
-package app.troop1018.org.troop1018;
+package app.troop1018.org.troop1018.fragments;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -7,8 +7,10 @@ import android.content.res.Resources;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -31,6 +33,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
+import app.troop1018.org.troop1018.R;
+import app.troop1018.org.troop1018.gmail.GMailSender;
+
 public class ChuckCheckFragment extends Fragment {
 
     private List<CheckBox> drawer1Checkboxes = new ArrayList<>();
@@ -50,10 +55,10 @@ public class ChuckCheckFragment extends Fragment {
     private String notesToQM;
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        final TabHost host = getView().findViewById(R.id.tabHost);
+        final TabHost host = view.findViewById(R.id.tabHost);
         host.setup();
 
         //Tab 1
@@ -92,19 +97,19 @@ public class ChuckCheckFragment extends Fragment {
         drawer3Checkboxes.clear();
         drawer4Checkboxes.clear();
 
-        final TextView drawer1Pct = getView().findViewById(R.id.pots_pans_pct);
-        final TextView drawer2Pct = getView().findViewById(R.id.bowls_plates_pct);
-        final TextView drawer3Pct = getView().findViewById(R.id.utensils_pct);
-        final TextView drawer4Pct = getView().findViewById(R.id.supplies_pct);
-        final TextView totalPct = getView().findViewById(R.id.total_pct);
+        final TextView drawer1Pct = view.findViewById(R.id.pots_pans_pct);
+        final TextView drawer2Pct = view.findViewById(R.id.bowls_plates_pct);
+        final TextView drawer3Pct = view.findViewById(R.id.utensils_pct);
+        final TextView drawer4Pct = view.findViewById(R.id.supplies_pct);
+        final TextView totalPct = view.findViewById(R.id.total_pct);
 
-        final ProgressBar progressBarDrawer1 = getView().findViewById(R.id.progressBarDrawer1);
-        final ProgressBar progressBarDrawer2 = getView().findViewById(R.id.progressBarDrawer2);
-        final ProgressBar progressBarDrawer3 = getView().findViewById(R.id.progressBarDrawer3);
-        final ProgressBar progressBarDrawer4 = getView().findViewById(R.id.progressBarDrawer4);
-        final ProgressBar progressBarTotal = getView().findViewById(R.id.progressBarTotal);
+        final ProgressBar progressBarDrawer1 = view.findViewById(R.id.progressBarDrawer1);
+        final ProgressBar progressBarDrawer2 = view.findViewById(R.id.progressBarDrawer2);
+        final ProgressBar progressBarDrawer3 = view.findViewById(R.id.progressBarDrawer3);
+        final ProgressBar progressBarDrawer4 = view.findViewById(R.id.progressBarDrawer4);
+        final ProgressBar progressBarTotal = view.findViewById(R.id.progressBarTotal);
 
-        LinearLayout ll1 = getView().findViewById(R.id.ll1);
+        LinearLayout ll1 = view.findViewById(R.id.ll1);
         int childCount = ll1.getChildCount();
         for (int i = 0; i < childCount; i++) {
             View v = ll1.getChildAt(i);
@@ -112,7 +117,7 @@ public class ChuckCheckFragment extends Fragment {
                 drawer1Checkboxes.add((CheckBox)v);
                 ((CheckBox)v).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                     @Override
-                    public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                         drawerCheckboxChanged(drawer1Pct, totalPct, progressBarDrawer1, progressBarTotal, drawer1Checkboxes);
                     }
                 });
@@ -120,7 +125,7 @@ public class ChuckCheckFragment extends Fragment {
         }
         progressBarDrawer1.setMax(drawer1Checkboxes.size());
 
-        LinearLayout ll2 = getView().findViewById(R.id.ll2);
+        LinearLayout ll2 = view.findViewById(R.id.ll2);
         childCount = ll2.getChildCount();
         for (int i = 0; i < childCount; i++) {
             View v = ll2.getChildAt(i);
@@ -128,7 +133,7 @@ public class ChuckCheckFragment extends Fragment {
                 drawer2Checkboxes.add((CheckBox)v);
                 ((CheckBox)v).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                     @Override
-                    public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                         drawerCheckboxChanged(drawer2Pct, totalPct, progressBarDrawer2, progressBarTotal, drawer2Checkboxes);
                     }
                 });
@@ -136,7 +141,7 @@ public class ChuckCheckFragment extends Fragment {
         }
         progressBarDrawer2.setMax(drawer2Checkboxes.size());
 
-        LinearLayout ll3 = getView().findViewById(R.id.ll3);
+        LinearLayout ll3 = view.findViewById(R.id.ll3);
         childCount = ll3.getChildCount();
         for (int i = 0; i < childCount; i++) {
             View v = ll3.getChildAt(i);
@@ -144,7 +149,7 @@ public class ChuckCheckFragment extends Fragment {
                 drawer3Checkboxes.add((CheckBox)v);
                 ((CheckBox)v).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                     @Override
-                    public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                         drawerCheckboxChanged(drawer3Pct, totalPct, progressBarDrawer3, progressBarTotal, drawer3Checkboxes);
                     }
                 });
@@ -152,7 +157,7 @@ public class ChuckCheckFragment extends Fragment {
         }
         progressBarDrawer3.setMax(drawer3Checkboxes.size());
 
-        LinearLayout ll4 = getView().findViewById(R.id.ll4);
+        LinearLayout ll4 = view.findViewById(R.id.ll4);
         childCount = ll4.getChildCount();
         for (int i = 0; i < childCount; i++) {
             View v = ll4.getChildAt(i);
@@ -160,7 +165,7 @@ public class ChuckCheckFragment extends Fragment {
                 drawer4Checkboxes.add((CheckBox)v);
                 ((CheckBox)v).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                     @Override
-                    public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                         drawerCheckboxChanged(drawer4Pct, totalPct, progressBarDrawer4, progressBarTotal, drawer4Checkboxes);
                     }
                 });
@@ -170,7 +175,7 @@ public class ChuckCheckFragment extends Fragment {
         progressBarTotal.setMax(drawer1Checkboxes.size() + drawer2Checkboxes.size() +
                 drawer3Checkboxes.size() + drawer4Checkboxes.size());
 
-        Button btnClear = getView().findViewById(R.id.btnClear);
+        Button btnClear = view.findViewById(R.id.btnClear);
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -178,7 +183,7 @@ public class ChuckCheckFragment extends Fragment {
             }
         });
 
-        Button btnClearAll = getView().findViewById(R.id.btnClearAll);
+        Button btnClearAll = view.findViewById(R.id.btnClearAll);
         btnClearAll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -186,7 +191,7 @@ public class ChuckCheckFragment extends Fragment {
             }
         });
 
-        Button btnReportQM = getView().findViewById(R.id.btnReportQM);
+        Button btnReportQM = view.findViewById(R.id.btnReportQM);
         btnReportQM.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -212,7 +217,7 @@ public class ChuckCheckFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         return inflater.inflate(R.layout.chuck_check, container, false);
     }
@@ -302,90 +307,98 @@ public class ChuckCheckFragment extends Fragment {
 
     private void showQuartermasterReportPopup() {
 
-        Spinner patrolSpinner = getView().findViewById(R.id.patrolSpinner);
-        final String patrol = (String) patrolSpinner.getSelectedItem();
+        View view = getView();
+        if (view != null) {
+            Spinner patrolSpinner =view.findViewById(R.id.patrolSpinner);
+            final String patrol = (String) patrolSpinner.getSelectedItem();
 
-        RelativeLayout viewGroup = getView().findViewById(R.id.chuckboxReportPopup);
-        LayoutInflater layoutInflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        final View layout = layoutInflater.inflate(R.layout.activity_quartermaster_report, viewGroup);
+            RelativeLayout viewGroup = view.findViewById(R.id.chuckboxReportPopup);
 
-        LinearLayout chuckCheck = getView().findViewById(R.id.chuck_check);
-        int popupHeight = chuckCheck.getHeight() - (int) (chuckCheck.getHeight() * .25);
+            FragmentActivity activity =  getActivity();
+            Context context = getContext();
 
-        // Creating the PopupWindow
-        quartermasterReportPopUp = new PopupWindow(getContext());
-        quartermasterReportPopUp.setContentView(layout);
-        quartermasterReportPopUp.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
-        quartermasterReportPopUp.setHeight(popupHeight);
-        quartermasterReportPopUp.setFocusable(true);
-        quartermasterReportPopUp.setOutsideTouchable(false);
+            if (activity != null && context != null) {
+                LayoutInflater layoutInflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                final View layout = layoutInflater.inflate(R.layout.activity_quartermaster_report, viewGroup);
 
-        // Clear the default translucent background
-        quartermasterReportPopUp.setBackgroundDrawable(new BitmapDrawable());
+                LinearLayout chuckCheck = view.findViewById(R.id.chuck_check);
+                int popupHeight = chuckCheck.getHeight() - (int) (chuckCheck.getHeight() * .25);
 
-        // Displaying the popup at the specified location, + offsets.
-        quartermasterReportPopUp.showAtLocation(layout, Gravity.CENTER, 0, 0);
+                // Creating the PopupWindow
+                quartermasterReportPopUp = new PopupWindow(context);
+                quartermasterReportPopUp.setContentView(layout);
+                quartermasterReportPopUp.setWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
+                quartermasterReportPopUp.setHeight(popupHeight);
+                quartermasterReportPopUp.setFocusable(true);
+                quartermasterReportPopUp.setOutsideTouchable(false);
 
-        TextView itemsMissing = layout.findViewById(R.id.itemsMissing);
-        itemsMissing.setMovementMethod(new ScrollingMovementMethod());
+                // Clear the default translucent background
+                quartermasterReportPopUp.setBackgroundDrawable(new BitmapDrawable());
 
-        Calendar c = Calendar.getInstance();
-        SimpleDateFormat df = new SimpleDateFormat("MMMM dd, yyyy");
-        String formattedDate = df.format(c.getTime());
+                // Displaying the popup at the specified location, + offsets.
+                quartermasterReportPopUp.showAtLocation(layout, Gravity.CENTER, 0, 0);
 
-        TextView currDate = layout.findViewById(R.id.currDate);
-        currDate.setText(formattedDate);
+                TextView itemsMissing = layout.findViewById(R.id.itemsMissing);
+                itemsMissing.setMovementMethod(new ScrollingMovementMethod());
 
-        final String missingChuckboxItems = getMissingChuckboxItems();
+                Calendar c = Calendar.getInstance();
+                SimpleDateFormat df = new SimpleDateFormat("MMMM dd, yyyy");
+                String formattedDate = df.format(c.getTime());
 
-        if (missingChuckboxItems.length() > 0) {
-            itemsMissing.setText(missingChuckboxItems);
-        }
-        else {
-            itemsMissing.setText(getString(R.string.all_items_accounted_for));
-        }
+                TextView currDate = layout.findViewById(R.id.currDate);
+                currDate.setText(formattedDate);
 
-        TextView patrolName = layout.findViewById(R.id.patrolName);
-        patrolName.setText(patrol);
-        EditText qmNotes = layout.findViewById(R.id.qmNotes);
-        if (notesToQM != null && notesToQM.trim().length() > 0) {
-            qmNotes.setText(notesToQM, TextView.BufferType.EDITABLE);
-        }
+                final String missingChuckboxItems = getMissingChuckboxItems();
 
-        int w = (int) ((28 / Resources.getSystem().getDisplayMetrics().density)) * 2;
-        int h = (int) ((24 / Resources.getSystem().getDisplayMetrics().density)) * 2;
-        int l = 12;
+                if (missingChuckboxItems.length() > 0) {
+                    itemsMissing.setText(missingChuckboxItems);
+                } else {
+                    itemsMissing.setText(getString(R.string.all_items_accounted_for));
+                }
 
-        Drawable icon = getContext().getResources().getDrawable(R.drawable.chuckcheck_rpt);
-        icon.setBounds(l, 0, l + w, h);
-        Button rpt = layout.findViewById(R.id.chuckcheckReport);
-        rpt.setCompoundDrawables(icon, null , null , null);
-        rpt.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                String subject = getSubjectForReport(patrol);
+                TextView patrolName = layout.findViewById(R.id.patrolName);
+                patrolName.setText(patrol);
                 EditText qmNotes = layout.findViewById(R.id.qmNotes);
-                notesToQM = qmNotes.getText().toString();
-                quartermasterReportPopUp.dismiss();
-                String body = generateQuartermasterReport(subject, missingChuckboxItems, notesToQM);
-                sendChuckCheckReport(subject, body);
+                if (notesToQM != null && notesToQM.trim().length() > 0) {
+                    qmNotes.setText(notesToQM, TextView.BufferType.EDITABLE);
+                }
+
+                int w = (int) ((28 / Resources.getSystem().getDisplayMetrics().density)) * 2;
+                int h = (int) ((24 / Resources.getSystem().getDisplayMetrics().density)) * 2;
+                int l = 12;
+
+                Drawable icon = context.getResources().getDrawable(R.drawable.chuckcheck_rpt);
+                icon.setBounds(l, 0, l + w, h);
+                Button rpt = layout.findViewById(R.id.chuckcheckReport);
+                rpt.setCompoundDrawables(icon, null, null, null);
+                rpt.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+
+                        String subject = getSubjectForReport(patrol);
+                        EditText qmNotes = layout.findViewById(R.id.qmNotes);
+                        notesToQM = qmNotes.getText().toString();
+                        quartermasterReportPopUp.dismiss();
+                        String body = generateQuartermasterReport(subject, missingChuckboxItems, notesToQM);
+                        sendChuckCheckReport(subject, body);
+                    }
+                });
+
+                // Getting a reference to Close button, and close the popup when clicked.
+                Button close = layout.findViewById(R.id.closeCuckboxReport);
+                close.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    public void onClick(View v) {
+
+                        EditText qmNotes = layout.findViewById(R.id.qmNotes);
+                        notesToQM = qmNotes.getText().toString();
+                        quartermasterReportPopUp.dismiss();
+                    }
+                });
             }
-        });
-
-        // Getting a reference to Close button, and close the popup when clicked.
-        Button close = layout.findViewById(R.id.closeCuckboxReport);
-        close.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-                EditText qmNotes = layout.findViewById(R.id.qmNotes);
-                notesToQM = qmNotes.getText().toString();
-                quartermasterReportPopUp.dismiss();
-            }
-        });
+        }
     }
 
     private String generateQuartermasterReport(String subject, String missingItems, String qmNotes) {

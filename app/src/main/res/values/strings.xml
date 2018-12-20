@@ -225,7 +225,9 @@
     <string name="empty_chuck_check">You have not checked any chuckbox items. Make sure you do an inventory of your patrol\'s chuckbox before sending a report to the troop quartermaster</string>
     <string name="btn_close">Close</string>
     <string name="authentication_error_msg">Failed to authenticate your credentials.</string>
-    <string name="retrieving_data_msg">Retrieving data...</string>
+    <string name="retrieving_data_msg">Retrieving data&#8230;</string>
     <string name="error_retrieving_data_msg">Error retrieving data!</string>
     <string name="no_data_found_msg">No data found.</string>
+    <string name="eat_sleep_fish">Eat Sleep Fish</string>
+    <string name="qm_rpt_send_err">Error Sending Email to Quartermaster</string>
 </resources>

@@ -15,11 +15,12 @@
 
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_gravity="top|left|clip_horizontal"
+        android:layout_gravity="top|start|clip_horizontal"
         android:adjustViewBounds="true"
         android:background="@android:color/transparent"
         android:foregroundGravity="left|clip_horizontal"
         android:scaleType="fitStart"
+        android:contentDescription="@string/eat_sleep_fish"
         app:srcCompat="@drawable/esf1" />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,4 +1,4 @@
-package app.troop1018.org.troop1018;
+package app.troop1018.org.troop1018.gmail;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -10,8 +10,8 @@ import android.view.KeyEvent;
 import android.widget.Toast;
 
 import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.security.Security;
 import java.util.Properties;
@@ -26,6 +26,8 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import app.troop1018.org.troop1018.R;
+import app.troop1018.org.troop1018.SettingsActivity;
 
 public class GMailSender extends javax.mail.Authenticator implements DialogInterface.OnKeyListener {
     private static final String mailhost = "smtp.gmail.com";
@@ -82,8 +84,8 @@ public class GMailSender extends javax.mail.Authenticator implements DialogInter
             toast.show();
         }
         else {
-            final String title = "Error Sending Email to Quartermaster";
-            android.support.v7.app.AlertDialog aDialog = new AlertDialog.Builder(context).setMessage(message).setTitle("Error Sending Email to Quartermaster")
+            final String title = context.getString(R.string.qm_rpt_send_err);
+            android.support.v7.app.AlertDialog aDialog = new AlertDialog.Builder(context).setMessage(message).setTitle(title)
                     .setNeutralButton(R.string.btn_close, new DialogInterface.OnClickListener() {
                         public void onClick(final DialogInterface dialog, final int which) {
                             CharSequence text = context.getResources().getString(R.string.rept_not_sent_to_qm);
@@ -143,6 +145,7 @@ public class GMailSender extends javax.mail.Authenticator implements DialogInter
             }
             catch (Exception e) {
                 this.ex = e;
+                e.printStackTrace();
             }
             return null;
         }

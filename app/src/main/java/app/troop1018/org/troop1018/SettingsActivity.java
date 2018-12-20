@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 import android.support.v7.app.AppCompatActivity;
 
+import app.troop1018.org.troop1018.fragments.SettingsFragment;
+
 public class SettingsActivity extends AppCompatActivity {
 
     public static final String KEY_PREF_CHUCKBOX_EMAIL_SENDER = "chuck_check_email_sender";

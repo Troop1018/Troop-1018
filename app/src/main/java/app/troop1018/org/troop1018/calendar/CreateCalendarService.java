@@ -27,9 +27,9 @@ import java.util.List;
 //import com.google.api.services.calendar.Calendar;
 //import com.google.api.services.calendar.CalendarScopes;
 
-import app.troop1018.org.troop1018.TroopCalendarFragment;
+import app.troop1018.org.troop1018.fragments.TroopCalendarFragment;
 
-import static app.troop1018.org.troop1018.TroopCalendarFragment.PREF_ACCOUNT_NAME;
+//import static app.troop1018.org.troop1018.fragments.TroopCalendarFragment.PREF_ACCOUNT_NAME;
 
 public class CreateCalendarService  extends AsyncTask<Void, Void, Void> {
 
